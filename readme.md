@@ -15,8 +15,11 @@ simple_linear_regression_coeffs(data, x, y)
 
 ```
 Parameter:
+
   data: determines the name of the dataframe that contains the data
+  
   x: specify coefficient
+  
   y: specify response variable
 
 # Example
