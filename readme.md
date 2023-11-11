@@ -38,18 +38,18 @@ simple_linear_regression_coeffs(df1)
 # x                 6
 
 
-# example dataframe2
-ctl <- c(4.17, 5.58, 5.18, 6.11, 4.50, 4.61, 5.17, 4.53, 5.33, 5.14)
-trt <- c(4.81, 4.17, 4.41, 3.59, 5.87, 3.83, 6.03, 4.89, 4.32, 4.69)
-group <- gl(2, 10, 20, labels = c("0","1"))
-weight <- c(ctl, trt)
-df2 <- data.frame(weight, group)
+# example dataframe 2
+# Source of data: https://www.datacamp.com/tutorial/linear-regression-R
+library(readxl)
 
-simple_linear_regression_coeffs(df2, x = as.numeric(group), y = weight)
+ageandheight <- read_excel("ageandheight.xls", sheet = "Hoja2")
+
+simple_linear_regression_coeffs(ageandheight, x = ageandheight$age,
+                                y = ageandheight$height)
 
 # output
-#           Estimates
-# intercept     5.403
-# x            -0.371
+#            Estimates
+# intercept 64.8445105
+# x          0.3835315
 
 ```
